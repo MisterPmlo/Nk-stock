@@ -2,7 +2,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const Enmap = require("enmap");
+require('dotenv').config()
 
+const token = process.env.TOKEN;
 
 client.on("message", (message) => {
     if (message.content.startsWith("ping")) {
@@ -41,4 +43,4 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.login("Nzg5ODIyOTk5NTYxNjMzODEz.X93p_Q.aj0ZxHtq05NICyJqpoYdJBXu20A");
+client.login(token);

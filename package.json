@@ -6,6 +6,7 @@
   "dependencies": {
     "discord-bot-webhook": "^1.0.4",
     "discord.js": "^11.4.2",
+    "dotenv": "^8.2.0",
     "enmap": "^4.8.7"
   },
   "devDependencies": {},
