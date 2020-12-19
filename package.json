@@ -1,0 +1,17 @@
+{
+  "name": "NK-stock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord-bot-webhook": "^1.0.4",
+    "discord.js": "^11.4.2",
+    "enmap": "^4.8.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MisterPmlo",
+  "license": "ISC"
+}
