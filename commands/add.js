@@ -9,13 +9,19 @@ exports.run = (client, message, args) => {
 
     var MessageData = JSON.parse(fs.readFileSync('./message.json', 'utf-8'));
 
-    // Test
-    if (!MessageData[args[0]]) { 
+    // Ajout
+    if (!args[0]) {
         message.channel.send("Il manque l'argument");
     } else {
-        if(args[1] != "") {
-            MessageData[args[0]] = {
-                quantité: args[1],
+        if(args[1]) {
+            if (MessageData[args[0]]) {
+                MessageData[args[0]] = {
+                    quantité: parseInt(MessageData[args[0]].quantité) + parseInt(args[1]),
+                }
+            } else {
+                MessageData[args[0]] = {
+                    quantité: parseInt(args[1]),
+                }
             }
         } else {
             message.channel.send("Il manque la quantité");

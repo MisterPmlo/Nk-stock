@@ -6,12 +6,6 @@ require('dotenv').config()
 
 const token = process.env.TOKEN;
 
-client.on("message", (message) => {
-    if (message.content.startsWith("ping")) {
-        message.channel.send("pong!");
-    }
-});
-
 
 // This loop reads the /events/ folder and attaches each event file to the appropriate event.
 fs.readdir("./events/", (err, files) => {
